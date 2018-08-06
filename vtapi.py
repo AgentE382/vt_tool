@@ -3,6 +3,8 @@ from requests import get, post
 from queue import Queue
 from threading import Thread, BoundedSemaphore, Timer
 
+# split into two APIs. APIManager / ApiBase and VirusTotalApi
+
 waiting_requests = Queue()
 api_slots = BoundedSemaphore(value = 4)
 
