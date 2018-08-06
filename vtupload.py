@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 from sys import argv
-
-def check_file(path):
-	with open(path, 'rb', buffering = 0) as f:
-		# for b in iter(:
-		# 	pass
+from vtapi import Public as vt
 
 if __name__ == '__main__':
-	check_file(argv[0])
+	result = vt.check_file(argv[0])
+	if result != 0:
+		print('INFECTED')
+		
